@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kool Chat</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style-modal.css">
+
+</head>
+
+<body>
+  <div class="chat-heading">
+    <div class="top-line">
+      <h1 class="title" id="title">Kool Chat</h1>
+      <button id="btn-add-user" class="add-user">Start</button>
+    </div>
+    <!-- <h4 class="title" id="peerId"></h4> -->
+  </div>
+
+  <ul id="messages"></ul>
+  <form id="form-msg" action="">
+    <input id="input-msg" autocomplete="off" />
+    <button>Send</button>
+  </form>
+
+  <!-- popup modal -->
+  <div id="add-user-modal" class="modal modal-hide">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <h3 id="peer-id"></h3>
+      <h4>Choose Option 1 or 2</h4>
+      <h4>Option 1</h4>
+      <p>LINE or text message your friend your ID. Ask them to enter it in their Option 2 and click OK</p>
+      <hr>Or</hr>
+      <h4>Option 2</h4>
+      <p>If your friend LINED you or texted you their ID, then enter it below and cick OK</p>
+      <form id="form-partner-id" action="">
+        <input id="input-partner-id" autocomplete="off" />
+        <button id="btn-partner-id" class="btn-partner-id">OK</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
