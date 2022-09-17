@@ -111,11 +111,15 @@ const sendConnRequest = async () => {
 window.onload = async (event) => {
   // Get your peer object and wait for it to open
   let id = '';
+  id = Math.floor(1000 + Math.random() * 9000);
+
   peer = new Peer(id, {
     host: "evening-atoll-16293.herokuapp.com",
     port: 443,
     secure: true,
   });
+
+  debugger;
 
   peerId = await getPeerId(peer);
 
