@@ -55,6 +55,7 @@ body {
   background-color: var(--dracula-orange);
   padding: 8px 20px;
   margin: 0 10px;
+  color: var(--dracula-dark-black)
 }
 
 
