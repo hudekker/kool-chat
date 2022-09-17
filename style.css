@@ -91,7 +91,7 @@ body {
   margin: 0.25rem;
   border-radius: 3px;
   outline: none;
-  color: var(--dracula-black);
+  color: var(--dracula-dark-black);
 }
 
 .btn-partner-id {
