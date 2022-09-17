@@ -50,9 +50,10 @@ body {
 }
 
 .add-user {
+  border-color: var(--dracula-dark-black);
   border-radius: 10px;
   background-color: var(--dracula-orange);
-  padding: 10px 20px;
+  padding: 8px 20px;
   margin: 0 10px;
 }
 
