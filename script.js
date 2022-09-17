@@ -45,9 +45,10 @@ const receiveConnRequest = async (conn2) => {
 
   // Wait for the connection to open 
   conn = conn2;
-  debugger;
+
   let boolReceiver = true;
   await connOpen(conn, boolReceiver);
+  console.log('finished waiting for receive conn request');
 
   // Keep this event listener open, will receive data multiple times
   conn.on("data", (data) => {
@@ -82,7 +83,7 @@ const sendConnRequest = async () => {
   // Wait for the conn to open and add it to the dropdown
   let boolReceiver = false;
   await connOpen(conn, boolReceiver);
-
+  console.log('Sent Conn request and finished waiting for connOpen');
   // Keep this event listener open, will receive data multiple times
   conn.on("data", (data) => {
     displayMsg(`${data} `, 'friend-msg');
@@ -133,7 +134,6 @@ window.onload = async (event) => {
 formMsg.addEventListener('submit', function (e) {
   e.preventDefault();
   if (inputMsg.value) {
-    debugger;
     displayMsg(inputMsg.value, 'my-msg');
     conn.send(inputMsg.value);
     inputMsg.value = '';
@@ -187,6 +187,7 @@ window.onclick = function (event) {
 btnPartnerId.onclick = function () {
   partnerId = document.querySelector('#input-partner-id').value;
   if (partnerId !== '') {
+    console.log(partnerId);
     // displayMsg(`Friend ID = ${partnerId} `, `admin-msg`)
     sendConnRequest();
   }
