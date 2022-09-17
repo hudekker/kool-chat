@@ -156,3 +156,7 @@ li.admin-msg>div {
 .highlight {
   background: var(--dracula-yellow);
 }
+
+select {
+  font-size: 50px;
+}
